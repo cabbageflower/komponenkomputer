@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListItemController;
+use App\Http\Controllers\ListProdukController;
+use App\Http\Controllers\prak5Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/list-items', [ListItemController::class, 'tampilkan']);
+
+Route::get('/prak5', [prak5Controller::class, 'index']);
+
+Route::get('/list_product', [ListProdukController::class, 'show']);
